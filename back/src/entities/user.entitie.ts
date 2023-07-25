@@ -2,17 +2,17 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
 @Entity("users")
 class User {
-  @PrimaryGeneratedColumn("uuid")
-  id: string = "";
+  @PrimaryGeneratedColumn("increment")
+  id: number;
 
   @Column()
-  name: string = "";
+  name: string;
 
   @Column({ unique: true })
-  email: string = "";
+  email: string;
 
   @Column()
-  password: string = "";
+  password: string;
 }
 
 export { User }
