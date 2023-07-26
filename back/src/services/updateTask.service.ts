@@ -8,7 +8,6 @@ const updateTaskService = async (
   data: TTaskUpdate,
   taskId: number
 ): Promise<TTaskResponse> => {
-  console.log("chegou")
   const taskRepository = AppDataSource.getRepository(Task);
   const oldTask = await taskRepository.findOneBy({ id: taskId });
   if (!oldTask) {
