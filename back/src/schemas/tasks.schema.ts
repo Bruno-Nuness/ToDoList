@@ -18,7 +18,6 @@ const TaskSchemaUpdate = taskSchema
     id: true,
   })
   .partial();
-
 const TaskSchemaResponse = z.array(taskSchema);
 
 export { taskSchema, TaskSchemaRequest, TaskSchemaResponse, TaskSchemaUpdate}

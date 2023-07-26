@@ -28,6 +28,8 @@ const ensureIsOwnerMiddleware = async (
       message: "You dont't have permissions",
     });
   }
+
+  return next()
 };
 
 export { ensureIsOwnerMiddleware };
